@@ -33,16 +33,36 @@ fieldset {
   padding: 0;
 }
 
+ul,
+ol {
+  list-style: none;        /*сбросили маркер*/
+}
+
 .content {
   display: flex;
   justify-content: center;
   align-items: center;
-  width:1140px;
   gap:30px;
+  margin: 133px 30px;
 }
 
 .result {
   align-items: flex-end;
+}
+
+.result__video-container {
+  position: relative;
+  width: 711px;                 /* занимает всю доступную ширину родителя */
+  height: auto;                
+  margin-bottom: 16px;  
+}
+
+.result__video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .content__details {
@@ -61,13 +81,33 @@ gap:26px;
 }
 
 .content__list-container {
-  height: 298px;
-overflow: auto;                     /*Добавили скролл*/
+  
 }
 
-ul,
-ol {
-  list-style: none;        /*сбросили маркер*/
+.content__list {
+ height: 298px;
+  overflow: auto;   /*Добавили скролл*/
+  display: flex;    
+  flex-direction: column;  
+  gap: 30px;
+}
+
+.content__video-card {
+  display: flex;
+  align-items: flex-start;
+  
+}
+
+.content__video-card-thumbnail {
+  height: auto;
+  min-width: 194px;
+  object-fit:cover;
+  object-position: center; 
+  
+}
+
+.content__video-card-description-container {
+  flex-grow: 1; 
 }
 
 /* Кастомный скроллбар */
