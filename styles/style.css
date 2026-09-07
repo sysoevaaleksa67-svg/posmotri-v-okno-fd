@@ -52,6 +52,8 @@ ol {
   margin: 0 30px;
 }
 
+
+
 .result {
   align-items: flex-end;
 }
@@ -102,6 +104,10 @@ ol {
 
 .content__accent {
   color: #545050;
+}
+
+.content__list-container {
+  height: 298px;
 }
 
 .content__list-item .content__card-link {
@@ -208,7 +214,6 @@ ol {
 }
 
 .content__list {
-  height: 298px;
   overflow: auto; /*Добавили скролл*/
   display: flex;
   flex-direction: column;
@@ -280,6 +285,7 @@ ol {
 
 /*Стилизуем кнопки*/
 .button {
+  min-height: 34px;
   border: 1px solid #fff;
   background-color: transparent;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -297,7 +303,6 @@ ol {
 
 .more-button {
   width: 100%;
-  height: 34px;
 }
 
 button:hover {
