@@ -61,7 +61,6 @@ ol {
   width: 711px;
   height: 386px;
   margin-bottom: 16px;
-  overflow: hidden;
 }
 
 .result__video {
@@ -79,7 +78,7 @@ ol {
   inline-size: 100%;
   block-size: 100%;
   max-inline-size: 399px;
-  gap: 26px;
+  gap: 22px;
 }
 
 .search-form {
@@ -121,6 +120,7 @@ ol {
   padding-right: 3px;
 }
 
+
 .content__video-card-title {
   font-weight: 700;
   font-size: 30px;
@@ -131,6 +131,7 @@ ol {
   overflow: hidden; /*скрываем , что не помещается*/
   text-overflow: ellipsis; /*троеточие вместо текста*/
 }
+
 
 .visually-hidden {
   position: absolute;
@@ -165,7 +166,7 @@ ol {
 .search-form__textfield {
   appearance: none;
   border: none;
-  width: 225px;
+  min-width: 225px;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   background-color: #1b1919;
@@ -208,6 +209,8 @@ ol {
   text-decoration: underline;
   text-decoration-color: #fff;
 }
+
+
 
 .search-form__checkbox:focus-visible + .search-form__pseudo-checkbox {
   outline: 1px solid #fff;
@@ -272,8 +275,6 @@ ol {
 .content__video-card-description {
   font-size: 18px;
   line-height: 16.2px;
-  overflow: hidden;
-  padding-top: 6px;
 }
 
 .search-form__fieldset-title {
@@ -298,8 +299,8 @@ ol {
 
 .search-form__submit-button {
   align-self: flex-end;
-  width: 194px;
-  height: 34px;
+  min-width: 194px;
+  min-height: 34px;
 }
 
 .more-button {
@@ -320,6 +321,16 @@ button:hover {
 
 .button:focus-visible {
   outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline:1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__textfield:focus-visible {
+  outline:1px solid #fff;
   outline-offset: 1px;
 }
 
