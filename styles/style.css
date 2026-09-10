@@ -129,6 +129,8 @@ ol {
   white-space: nowrap; /*запрещаем переносы*/
   overflow: hidden; /*скрываем , что не помещается*/
   text-overflow: ellipsis; /*троеточие вместо текста*/
+  line-height: 1;
+  margin-bottom: 6px;
 }
 
 .visually-hidden {
@@ -145,7 +147,6 @@ ol {
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
-  
 }
 
 /*сбросили границу формы чекбокса , так как fieldset имеет бордер сам по себе*/
@@ -158,7 +159,7 @@ ol {
   align-items: center;
   width: fit-content;
   gap: 5px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .search-form__textfield {
@@ -181,6 +182,7 @@ ol {
 .search-form__textfield::placeholder {
   color: rgb(255 255 255 / 0.7);
 }
+
 
 .search-form__pseudo-checkbox {
   /*СТИЛИЗУЕМ ЧЕКБОКС КВАДРАТИК*/
@@ -223,8 +225,6 @@ ol {
   display: block;
   text-decoration: none;
   color: white;
-  padding-right: 3px;
-  padding-left: 3px;
 }
 
 /*Текущая карточка*/
@@ -247,7 +247,7 @@ ol {
 
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
-  margin: 2px;
+  outline-offset: 1px;
 }
 
 .content__video-card {
@@ -257,10 +257,11 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  height: auto;
   width: 194px;
-  object-fit: contain;
+  height:103px;
+  object-fit: cover;
   object-position: center;
+   flex-shrink: 0; /*запрет на сжатие во флекс контейнере*/
 }
 
 .content__video-card-description-container {
@@ -282,6 +283,7 @@ ol {
   font-weight: 400;
   color: white;
   margin-bottom: 5px;
+  
 }
 
 /*Стилизуем кнопки*/
@@ -323,14 +325,13 @@ button:hover {
   outline-offset: 1px;
 }
 
-.search-form__label:has(:focus-visible) {
+.search-form__label:has(.search-form__checkbox:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
 
 .search-form__textfield:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
+  outline: none;
 }
 
 /* Кастомный скроллбар */
